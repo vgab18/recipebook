@@ -7,7 +7,6 @@
 <style>
   main {
     padding: 1em;
-    max-width: 240px;
     margin: 0 auto;
     background-color: #071a52;
     color: #a7ff83;
@@ -37,11 +36,18 @@
 
   .spinner-container {
     margin-top: 100px;
+    color: #dcdde1;
   }
 
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
+  @media (max-width: 425px) {
+    .search-input {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .search-input {
+      width: 50%;
     }
   }
 </style>
@@ -55,7 +61,7 @@
   {#if fetching}
     <center>
       <div class="spinner-container">
-        <h4>Searching..</h4>
+        <h4>Searching...</h4>
         <br />
         <Spinner />
       </div>
